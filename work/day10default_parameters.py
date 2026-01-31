@@ -1,0 +1,70 @@
+# def Sum(a,b):
+#     print(a+b)
+
+# Sum(20,50)
+# Sum(20)
+
+# Default Parameter- such a  default values which we pass during function declartion 
+# used when user doesnt passed sufficient arguments
+
+def Sum(a=0,b=0):
+    print(a+b)
+
+Sum(100,200)
+Sum(10)
+Sum()
+ 
+#  *****************
+
+def Mult(a=1,b=1):
+    print(a*b)
+
+Mult(5,4)
+Mult()
+Mult(4)
+
+
+# ******************************
+
+def Emp(empName="JOHN",empSkill="React",empId=None):
+    return empName, " And ", empSkill, " And ", empId
+
+# print(Emp())
+# print("","Python")
+# print(Emp("","JS"))
+
+print(Emp(empSkill="Devops",empName="Pratik",empId=123))
+
+# ***************************************************
+
+# Arguments
+# used to handle extra arguments which we passed during function calling
+# *args
+
+def Addition(x=0,y=0,z=0,*args):
+    # print(args)
+    sum=x+y+z
+    for i in args:
+     print(i)
+     sum+=i
+
+    print("Total Sum Is : ", sum)
+
+# Addition(100,200,400)
+# Addition(200,300)
+
+# arguments-actual values
+Addition(10,30,20,1000,200,5000)
+
+
+
+
+
+
+# Recurrsive function
+
+# def Demo(parameter):
+#    if base_condition:
+#       return some_value
+#    else:
+#       return Demo(some_value)
